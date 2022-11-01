@@ -1,0 +1,45 @@
+.header {
+    background-color: var(--gray-600);
+    padding: 1rem;
+    margin-bottom: 10px;
+
+    .headerContent {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.2rem;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        img {
+            cursor: pointer;
+        }
+
+        nav {
+            display: flex;
+            gap: 1rem;
+
+            a {
+                text-decoration: none;
+                color: var(--gray-400);
+                outline: none;
+                border: none;
+                border-top: 3px solid transparent;
+                border-bottom: 3px solid transparent;
+
+                transition: filter 0.3s;
+
+                &:hover {
+                    filter: brightness(0.8);
+                    border-bottom: 3px solid var(--green-500);
+                }
+
+                &[aria-current="page"] {
+                    color: var(--green-500);
+                }
+            }
+        }
+    }
+
+}
